@@ -49,6 +49,7 @@ public class StepDefinitions{
 	@Given("^open facebook$")
 	public void open_facebook() throws Throwable {
 		driver.get("https://www.facebook.com/");
+		System.out.println("Added facebook statement");
 	}
 	
 	@Given("^open \"([^\"]*)\"$")
