@@ -27,7 +27,7 @@ public class StepDefinitions{
 	@Before()
 	public void openBrowser(Scenario scenario){
 
-		System.setProperty("webdriver.chrome.driver", "D:\\Coding\\jars\\chromedriver_win32_2.32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\Coding\\jars\\chromedriver_win32_2.33\\chromedriver.exe");
 		ChromeOptions cOptions = new ChromeOptions();
 		Map<String, Object> chromePrefs = new HashMap<String, Object>();
 		chromePrefs.put("profile.default_content_setting_values.notifications", 2);
