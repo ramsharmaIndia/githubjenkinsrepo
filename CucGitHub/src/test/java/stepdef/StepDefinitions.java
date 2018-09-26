@@ -4,11 +4,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
 
 import cucumber.api.DataTable;
 import cucumber.api.Scenario;
@@ -119,7 +119,7 @@ public class StepDefinitions{
 	@Then("^profile should be opened$")
 	public void profile_should_be_opened() throws Throwable {
 		Thread.sleep(2000);
-		Assert.assertTrue("Profile page has not been opened", driver.findElements(By.xpath("//span[text()='Intro']")).size()>0);
+		Assert.assertTrue(driver.findElements(By.xpath("//span[text()='Intro']")).size()>0, "Profile page has not been opened");
 	}
 	
 	@Then("^get some value from dataTable$")

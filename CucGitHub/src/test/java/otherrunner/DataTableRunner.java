@@ -1,13 +1,10 @@
 package otherrunner;
 
-import org.junit.runner.RunWith;
-
 import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(format={"pretty","html:target/myCucReport"}, features={"src/mycuc/basic/features/dataTable.feature"})
-public class DataTableRunner {
+@CucumberOptions(plugin={"pretty","html:target/myCucReport"}, features={"src/mycuc/basic/features/dataTable.feature"})
+public class DataTableRunner  extends AbstractTestNGCucumberTests{
 
 	
 }

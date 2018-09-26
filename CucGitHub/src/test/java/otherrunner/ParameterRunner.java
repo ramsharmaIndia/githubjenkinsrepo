@@ -1,13 +1,14 @@
 package otherrunner;
 
-import org.junit.runner.RunWith;
+import org.testng.annotations.Test;
 
 import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(format={"pretty","html:target/myCucReport"}, features={"src/mycuc/basic/features/parameter.feature"})
-public class ParameterRunner {
+
+@CucumberOptions(plugin={"pretty","html:target/myCucReport"}, features={"src/mycuc/basic/features/parameter.feature"})
+@Test
+public class ParameterRunner  extends AbstractTestNGCucumberTests{
 
 	
 }
